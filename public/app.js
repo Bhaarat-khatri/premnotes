@@ -19,7 +19,6 @@ function pageScroll() {
     // If condition to set repeat 
     if (count < 2) {
         var objDiv = document.getElementById("ecran");
-        console.log(objDiv.scrollTop);
         objDiv.scrollTop = objDiv.scrollTop + 1;
         //set scrolling time start
         my_time = setTimeout('pageScroll()', 400);

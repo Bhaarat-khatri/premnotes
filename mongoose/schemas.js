@@ -45,6 +45,11 @@ const notificationschema = new mongoose.Schema({
 
 const notification = mongoose.model("notifications", notificationschema);
 
+const numschema = new mongoose.Schema({
+  value:Number,
+});
+
+const num = mongoose.model("nums", numschema);
 
 //console.log("connected with schemas");
 
@@ -53,5 +58,6 @@ module.exports = {
   sems,
   Year,
   notification,
+  num,
   Branch
 };
