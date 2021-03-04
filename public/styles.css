@@ -52,6 +52,7 @@ h1 {
     justify-content: space-around;
     width: 100%;
     flex-direction: column;
+    
 }
 
 .data{
@@ -62,7 +63,7 @@ h1 {
 
 .heading{
     display: flex;
-    background-color: #dc3545;
+    background-color: #427780;
     height: 8vh;
     align-items: center;
 }
@@ -70,7 +71,7 @@ h1 {
 h5{ 
     width: 100%;
     text-align: center;
-    background-color: #dc3545;
+    background-color: #427780;
     color: white;
     border-radius: 3%;
 }
@@ -84,10 +85,11 @@ h5{
     margin-bottom: 3%;
     border: #17a2b8 solid 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
+
 li{ 
+    margin-top: 3%;
     color: black;
     margin-left: 3%;
     text-align: left;
@@ -97,7 +99,10 @@ li:not(:last-child){
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-
+.giphy{
+    width: 40px;
+    height: 30px;
+}
 
 
 .image {
@@ -131,6 +136,11 @@ i {
 
 .ic {
     padding: 2% 2%;
+}
+
+
+.dis-0{
+    display: none;
 }
 
 @media(max-width:1183) {

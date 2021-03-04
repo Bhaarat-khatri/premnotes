@@ -23,6 +23,7 @@ const {
   subject,
   sems,
   notification,
+  num,
   Branch
 } = require('./mongoose/schemas');
 const {
@@ -49,9 +50,12 @@ app.get('/', function (req, res) {
   if(req.get('host')!="localhost:8080")
   {fetch("https://api.countapi.xyz/update/premnotes/notes?amount=1");}
   notification.find((err,results) => {
-    res.render("index" ,{
-      resl : results,
-    });
+    num.find((err,result) => {
+      res.render("index" ,{
+        resl : results,
+        resl2 : result,
+      });
+    }); 
   });
 });
 
@@ -148,16 +152,28 @@ app.get('/dev', function (req, res) {
 });
 
 app.get("/compose", function (req, res) {
-  res.render("compose");
+  res.render("newvalue");
 });
 
 app.post("/compose", function (req, res) {
+  const number = new num({
+    value: req.body.newvalue
+  });
+  number.save();
+  res.redirect("/compose1");
+});
+
+app.get("/compose1", function (req, res) {
+  res.render("newdata");
+});
+
+app.post("/compose1", function (req, res) {
   const noti = new notification({
     text: req.body.composeText
   });
 
   noti.save();
-  res.redirect("/");
+  res.redirect("/compose1");
 });
 
 const Port = process.env.PORT || 8080 ;

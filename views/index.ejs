@@ -2,7 +2,6 @@
 
 <!-- Css -->
 <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../public/pageviews.js">
 <title>Study</title>
 </head>
 
@@ -32,13 +31,20 @@
                             </div>
                             <div class="data" id="ecran">
                                 <ul>
-                                    <% for(var i=0 ; i<resl.length ; i++ ) { %>
-                                    <li><%= resl[i].text %></li>
-                                    <% } %>
+                                    <% var x = resl2[resl2.length-1].value;%>
+                                    <% for(var i=resl.length-1 ; i>=0 ; i-- ) { %>
+                                    <%      if(x>0) { %>
+                                               <li><%= resl[i].text %> <img class="giphy" src="../images/new.gif"
+                                            alt="new"></li>
+                                        <%  console.log(x); } else { %>
+                                            <li><%= resl[i].text %></li>
+                                        <% }  %>                                      
+                                    <% x--; } %>
                                 </ul>
                             </div>
                         </div>
-                        <a href="/notes"><button type="button" class="btn btn-info"><i class="fas fa-bookmark"></i>Notes</button></a>
+                        <a href="/notes"><button type="button" class="btn btn-info"><i
+                                    class="fas fa-bookmark"></i>Notes</button></a>
                     </div>
                 </div>
             </div>
