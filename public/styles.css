@@ -40,66 +40,68 @@ h1 {
 }
 
 
-.text, .link{
+.text,
+.link {
     margin: 2% 0%;
     padding: 2% 5%;
-} 
+}
 
-.link{
+.link {
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     flex-direction: column;
-    
+
 }
 
-.data{
+.data {
     height: inherit;
-    overflow-x: hidden; 
-    overflow-y: auto; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.heading{
+.heading {
     display: flex;
-    background-color: #427780;
-    height: 8vh;
+    background-color: #dc3545;
+    height: 6vh;
     align-items: center;
 }
 
-h5{ 
+h5 {
     width: 100%;
     text-align: center;
-    background-color: #427780;
+    background-color: #dc3545;
     color: white;
     border-radius: 3%;
+    margin-top: 1%;
 }
 
-.new{
+.new {
     width: 90%;
     height: 100%;
     background-color: white;
     padding: 2% 2%;
-    border-radius: 1%;  
+    border-radius: 1%;
     margin-bottom: 3%;
     border: #17a2b8 solid 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-li{ 
+li {
     margin-top: 3%;
     color: black;
     margin-left: 3%;
     text-align: left;
 }
 
-li:not(:last-child){
+li:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.giphy{
+.giphy {
     width: 40px;
     height: 30px;
 }
@@ -118,7 +120,7 @@ li:not(:last-child){
 
 .show2 .fas {
     transform: translate(-50%);
-    margin: 0% 5%;
+    margin: 0% 1%;
 
 }
 
@@ -136,11 +138,6 @@ i {
 
 .ic {
     padding: 2% 2%;
-}
-
-
-.dis-0{
-    display: none;
 }
 
 @media(max-width:1183) {
@@ -161,15 +158,17 @@ i {
     .image {
         width: 90%;
     }
-    .notification{
+
+    .notification {
         justify-content: center;
     }
 }
 
 @media(max-width: 700px) {
-    .link{
+    .link {
         flex-direction: column;
     }
+
     .show1 .row {
         text-align: center;
     }
@@ -196,11 +195,13 @@ i {
     .text {
         font-size: 1.5rem;
     }
-    .new{
+
+    .new {
         width: 90%;
         height: 80%;
     }
-    .notification{
+
+    .notification {
         justify-content: center;
     }
 }
@@ -266,7 +267,7 @@ a:hover {
 }
 
 .preloader {
-    top:0%;
+    top: 0%;
     background-color: white;
     width: 100%;
     z-index: 1001;
