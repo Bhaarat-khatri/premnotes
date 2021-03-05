@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-
-
-mongoose.connect(process.env.MONGO_URL || "mongodb+srv://webstartup:Test123456@cluster0.jlc5g.mongodb.net/knit", {
+const path = require("path");
+require('dotenv').config();
+require('dotenv').config({ path: path.resolve(__dirname, './.env') });
+mongoose.connect( process.env.MONGO_KEY , {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {
